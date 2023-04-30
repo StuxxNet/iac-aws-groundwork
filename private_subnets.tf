@@ -23,8 +23,8 @@ resource "aws_route_table" "private_route_table" {
 
   # Default route to the internet
   route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_nat_gateway.private_network_nat_gateway.id
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.private_network_nat_gateway.id
   }
 
   # Tags
